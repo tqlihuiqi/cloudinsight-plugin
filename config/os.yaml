@@ -1,0 +1,15 @@
+init_config:
+
+instances:
+  - target: "load"
+  - target: "process"
+  - target: "cpu"
+  - target: "memory"
+  - target: "swap"
+  - target: "disk"
+  - target: "network"
+    interface:
+      - "eth0"
+      - "eth1"
+  - target: "tcp"
+  - target: "port"

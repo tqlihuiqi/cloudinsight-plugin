@@ -1,0 +1,38 @@
+init_config:
+  default_pattern: '\s+(\d+(.\d+)?).*'
+
+instances:
+  - target: "Number of clients accessing cache:"
+    metricname: "squid.clients.access.cache"
+
+  - target: "Average HTTP requests per minute since start:"
+    metricname: "squid.requests.http.avg.1m"
+
+  - target: "Average ICP messages per minute since start:"
+    metricname: "squid.requests.icp.avg.1m"
+
+  - target: "Memory hits as % of hit requests:"
+    metricname: "squid.requests.mem-hit.avg.5m"
+    pattern: '\s+5min:\s+(\d+(.\d+)?).*'
+
+  - target: "Disk hits as % of hit requests:"
+    metricname: "squid.requests.disk-hit.avg.5m"
+    pattern: '\s+5min:\s+(\d+(.\d+)?).*'
+
+  - target: "Storage Mem size:"
+    metricname: "squid.store.memery.size"
+
+  - target: "Storage Swap size:"
+    metricname: "squid.store.swap.size"
+
+  - target: "Maximum number of file descriptors:"
+    metricname: "squid.max.open.file"
+
+  - target: "Largest file desc currently in use:"
+    metricname: "squid.allow.open.file"
+
+  - target: "Number of file desc currently in use:"
+    metricname: "squid.current.open.file"
+
+  - target: "Available number of file descriptors:"
+    metricname: "squid.available.open.file"
